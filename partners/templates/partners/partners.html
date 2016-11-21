@@ -1,0 +1,28 @@
+{% extends 'partners/base.html' %}
+{% block content %}
+
+    <header id="fh5co-header" class="fh5co-cover" role="banner" style="background-image:url(images/img_bg_1.jpg);">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+            </div>
+            </div>
+        </div>
+    </header>
+	<div class="container">
+		<div class="row">
+			<div id="fh5co-section">
+				<div class="col-nineth">
+					<div class="row">
+						<div class="display-tc animate-box" data-animate-effect="fadeIn">
+                            <h1>Listado de socios</h1>
+                                {% for partner in partners %}
+                                    <h5><a href="{% url 'partner_edit'  partner.id  %}">{{ partner.name }} {{partner.lastname}}</a></h5>
+                                {% endfor %}
+                        </div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+ {% endblock content %}

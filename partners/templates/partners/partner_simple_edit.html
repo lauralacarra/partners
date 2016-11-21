@@ -1,0 +1,38 @@
+{% extends 'partners/base.html' %}
+{% block content %}
+
+    <header id="fh5co-header" class="fh5co-cover" role="banner" style="background-image:url(images/img_bg_1.jpg);">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+            </div>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <div class="row">
+            <div id="fh5co-section">
+                <div class="col-nineth">
+                    <div class="row">
+                        <div class="display-tc animate-box" data-animate-effect="fadeIn">
+                            <h1>Nuevo socio</h1>
+                            <form method="POST">{% csrf_token %} 
+
+                                <div class="row form-group">
+                                    <div class="col-md-6">
+                                        {{ form.as_p }}
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <input type="submit" value="Sí, quiero" class="btn btn-primary">
+                                </div>
+
+                            </form>  
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+ {% endblock content %}

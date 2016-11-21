@@ -1,0 +1,102 @@
+    {% extends 'partners/base.html' %}
+        {% block content %}
+
+        <header id="fh5co-header" class="fh5co-cover" role="banner" style="background-image:url(images/img_bg_1.jpg);">
+            <div class="overlay"></div>
+            <div class="container">
+                <div class="row">
+                </div>
+                </div>
+            </div>
+        </header>    
+        <div class="fh5co-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 animate-box">
+                        <h3>Nuevo socio</h3>
+
+                        <form method="POST">{% csrf_token %} 
+
+                            <div class="row form-group">
+                                <div class="col-md-6">
+                                    <!-- <label for="fname">First Name</label> -->
+                                    <input type="text" id="name" class="form-control" placeholder="Nombre">{{ partner.name }}
+                                </div>
+                                <div class="col-md-6">
+                                    <!-- <label for="lname">Last Name</label> -->
+                                    <input type="text" id="lastname" class="form-control" placeholder="Apellidos">{{ partner.lastname }}
+                                </div>
+                            </div>
+
+                            <div class="row form-group">
+                                <div class="col-md-12">
+                                    <!-- <label for="email">Email</label> -->
+                                    <input type="text" id="email" class="form-control" pattern="^[-\w.]+@{1}[-a-z0-9]+[.]{1}[a-z]{2,5}$" placeholder="Your email address">{{ partner.email }}
+                                </div>
+                            </div>
+
+                            <div class="row form-group">
+                                <div class="col-md-12">
+                                    <!-- <label for="subject">Subject</label> -->
+                                    <input type="text" id="dni" class="form-control" placeholder="DNI" pattern="(\d{8})([-]?)([A-Z]{1})">{{ partner.dni }}
+                                </div>
+                            </div>
+                             <div class="row form-group">
+                                <div class="col-md-12">
+                                    <!-- <label for="subject">Subject</label> -->
+                                    <input type="text" id="address" class="form-control" placeholder="Dirección">{{ partner.address }}
+                                </div>
+                            </div>
+
+                             <div class="row form-group">
+                                <div class="col-md-12">
+                                    <!-- <label for="subject">Subject</label> -->
+                                    <input type="text" id="postal_code" class="form-control" placeholder="CP">{{ partner.postal_code }}
+                                </div>
+                            </div>
+
+                             <div class="row form-group">
+                                <div class="col-md-12">
+                                    <!-- <label for="subject">Subject</label> -->
+                                    <input type="text" id="city" class="form-control" placeholder="Ciudad">{{ partner.city }}
+                                </div>
+                            </div>
+
+                             <div class="row form-group">
+                                <div class="col-md-12">
+                                    <!-- <label for="subject">Subject</label> -->
+                                    <input type="text" id="state" class="form-control" placeholder="Provincia">{{ partner.state }}
+                                </div>
+                            </div>
+
+                             <div class="row form-group">
+                                <div class="col-md-12">
+                                    <!-- <label for="subject">Subject</label> -->
+                                    <input type="text" id="country" class="form-control" placeholder="País">{{ partner.country }}
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <input type="submit" value="Sí, quiero" class="btn btn-primary">
+                            </div>
+
+                        </form>     
+                    </div>
+                    <div class="col-md-5 col-md-push-1 animate-box">
+                        
+                        <div class="fh5co-contact-info">
+                            <h3>Contact Information</h3>
+                            <ul>
+                                <li class="address">12 Castellana, <br> Madrid Spain</li>
+                                <li class="phone"><a href="tel://1234567920">+ 1235 2355 98</a></li>
+                                <li class="email"><a href="mailto:info@yoursite.com">info@yoursite.com</a></li>
+                                <li class="url"><a href="https://tutorial.djangogirls.org/es/">tutorial.djangogirls</a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        {% endblock content %}
